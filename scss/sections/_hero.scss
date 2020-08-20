@@ -1,0 +1,73 @@
+@import "../variables";
+
+.hero {
+  background: $bg-color url(../img/Path.png) no-repeat right top -49px;
+  position: relative;
+  z-index: -1;
+  right: 0;
+  max-height: 1100px;
+  &-group {
+    background: url(../img/Group.png) no-repeat right top 190px;
+    position: relative;
+    height: 100%;
+    &-content {
+      max-width: 539px;
+      padding-top: 261px;
+      padding-bottom: 677px;
+      &_title {
+        @include title;
+        font-size: 50px;
+        line-height: 66px;
+        letter-spacing: 1px;
+        padding-bottom: 20px;
+      }
+      &_description {
+        @include description;
+        padding-bottom: 69px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &_button {
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        &-fill {
+          width: 189px;
+          line-height: 26px;
+          padding: 5px 0 5px 0;
+          @include fill-button;
+        }
+        &-outline {
+          width: 189px;
+          line-height: 26px;
+          padding: 7px 0 3px 0;
+          @include outline-button;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1260px) {
+  .hero {
+    &-group {
+      background: none;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    &-group {
+      &-content {
+        &_button {
+          flex-direction: column;
+          &-fill {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

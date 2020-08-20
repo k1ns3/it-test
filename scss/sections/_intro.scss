@@ -1,0 +1,56 @@
+@import "../variables";
+
+.intro {
+  padding-top: 172px;
+  padding-bottom: 167px;
+  display: flex;
+  justify-content: space-between;
+  &_content {
+    position: relative;
+    max-width: 445px;
+    &_title {
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 48px;
+      padding-bottom: 16px;
+      @include title;
+    }
+    &_description {
+      padding-bottom: 40px;
+      @include description;
+    }
+    &_button {
+      button {
+        width: 150px;
+        font-size: 14px;
+        padding: 4px 0 4px 0;
+        @include fill-button;
+      }
+    }
+  }
+  img {
+    max-width: 480px;
+    min-width: 320px;
+  }
+}
+
+@media (max-width: 892px) {
+  .intro {
+    flex-direction: column;
+    img {
+      padding-bottom: 20px;
+      max-width: 470px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+    flex-direction: column;
+    img {
+      padding-bottom: 20px;
+      max-width: 280px;
+      max-height: 200px;
+    }
+  }
+}

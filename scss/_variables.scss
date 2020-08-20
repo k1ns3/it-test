@@ -1,0 +1,51 @@
+@import "./fonts";
+
+$bg-color: #fbfbfd;
+$menu-items: #505f98;
+$menu-title: #37447e;
+$button-color: #111b47;
+
+@mixin menu-button {
+  color: #ffffff;
+  background-color: $button-color;
+}
+
+@mixin fill-button {
+  background-color: $button-color;
+  color: #fff;
+  border: none;
+  margin-right: 30.5px;
+  border: 2px solid $button-color;
+  border-radius: 2px;
+  font-weight: 500;
+  text-align: center;
+  @include regular;
+}
+
+@mixin outline-button {
+  border: 2px solid #091133;
+  border-radius: 2px;
+  color: #091133;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+  text-align: center;
+  @include regular;
+}
+
+@mixin title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 48px;
+  color: #091133;
+  @include bold;
+}
+
+@mixin description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #6f7cb2;
+  @include regular;
+}
